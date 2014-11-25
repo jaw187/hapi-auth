@@ -1,0 +1,26 @@
+{
+  "name": "hapi-auth",
+  "version": "0.0.0",
+  "description": "hapi-auth =========",
+  "main": "bell.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaw187/hapi-auth"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaw187/hapi-auth/issues"
+  },
+  "homepage": "https://github.com/jaw187/hapi-auth",
+  "dependencies": {
+    "bell": "1.x.x",
+    "hapi": "7.x.x",
+    "hapi-auth-basic": "1.x.x",
+    "hapi-auth-cookie": "1.x.x",
+    "joi": "4.x.x"
+  }
+}
