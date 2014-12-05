@@ -22,7 +22,7 @@ var validate = function (username, password, callback) {
 
 // Handlers
 var publicHandler = function (request, reply) {
-
+console.log(request.route)
     reply('Everyone can see this...');
 };
 
@@ -32,10 +32,11 @@ var privateHandler = function (request, reply) {
 };
 
 // Create server
-var server = new Hapi.Server(8187);
+var server = new Hapi.Server();
+server.connection({ port: 8187 });
 
 // Load plugins
-server.pack.register(Basic, function (err) {
+server.register(Basic, function (err) {
 
     // Configure auth scheme
     var authOptions = {

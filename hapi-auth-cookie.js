@@ -60,10 +60,11 @@ var logout = function (request, reply) {
 };
 
 // Create server
-var server = new Hapi.Server(8188);
+var server = new Hapi.Server();
+server.connection({ port: 8188 })
 
 // Load plugins
-server.pack.register(AuthCookie, function (err) {
+server.register(AuthCookie, function (err) {
 
     // Configure auth scheme
     var authOptions = {

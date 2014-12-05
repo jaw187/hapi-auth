@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/jaw187/hapi-auth",
   "dependencies": {
-    "bell": "1.x.x",
-    "hapi": "7.x.x",
-    "hapi-auth-basic": "1.x.x",
-    "hapi-auth-cookie": "1.x.x",
-    "hapi-auth-hawk": "^1.1.1",
-    "hawk": "^2.3.0",
-    "insync": "^1.0.0",
-    "joi": "4.x.x",
-    "wreck": "^5.0.1"
+    "bell": "2.x.x",
+    "hapi": "8.x.x",
+    "hapi-auth-basic": "2.x.x",
+    "hapi-auth-cookie": "2.x.x",
+    "hapi-auth-hawk": "1.x.x",
+    "hawk": "2.x.x",
+    "insync": "1.x.x",
+    "joi": "5.x.x",
+    "wreck": "5.x.x"
   }
 }
