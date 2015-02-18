@@ -42,9 +42,10 @@ internals.createHawkHeader = function hawkHeader (id, url, method) {
 
 var startServer = function startServer (next) {
 
-    var server = new Hapi.Server(8190);
+    var server = new Hapi.Server();
+    server.connection({ port: 8190 });
 
-    server.pack.register(HapiAuthHawk, function (err) {
+    server.register(HapiAuthHawk, function (err) {
 
         if (err) {
             return next(err);
@@ -62,6 +63,7 @@ var startServer = function startServer (next) {
                 return callback(null, credential.cred)
             }
         };
+
         server.auth.strategy('YourHawkAuth', 'hawk', hawkOptions);
 
         var routes = [
@@ -77,6 +79,7 @@ var startServer = function startServer (next) {
                 }
             }
         ];
+        
         server.route(routes);
 
         server.start(function () {
